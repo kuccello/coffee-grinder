@@ -1,8 +1,8 @@
-var functions = require('firebase-functions');
+"use strict"; // Strict mode makes it easier to write "secure" JavaScript. Strict mode changes previously accepted "bad syntax" into real errors.
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// })
+const functions = require('firebase-functions');
+const admin = require('firebase-admin');
+const serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp(functions.config().firebase);
+
